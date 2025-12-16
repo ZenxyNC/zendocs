@@ -7,7 +7,7 @@ export default function SearchResult({ searchQuery }) {
 
 
   async function fetchData() {
-    await fetch("/searchData/searchData.json")
+    await fetch(`${import.meta.env.BASE_URL}searchData/searchData.json`)
       .then((res) => res.json())
       .then((data) => setSearchData(data))
     return
@@ -17,7 +17,7 @@ export default function SearchResult({ searchQuery }) {
   }, [])
 
   useEffect(() => {
-    if(!searchQuery) {
+    if (!searchQuery) {
       fetchData();
       return
     }
@@ -27,7 +27,7 @@ export default function SearchResult({ searchQuery }) {
       return item.title.toLowerCase().includes(searchQuery.toLowerCase())
     })
 
-    if(filteredData.length === 0) {
+    if (filteredData.length === 0) {
       setSearchData([])
       return
     }

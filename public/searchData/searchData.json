@@ -1,18 +1,18 @@
 [
   {
-    "icon": "../../../resources/AppIcon/zencore.png",
+    "icon": "resources/AppIcon/zencore.png",
     "title": "ZenCore",
     "description": "ZenApps grew quickly. Installing and putting them in home screen is just massive space-wasting and time-wasting. ZenCore is the hero here, by centralizing all ZenApps in a single app.",
     "param": "/zencore"
   },
   {
-    "icon": "../../../resources/AppIcon/zencore.png",
+    "icon": "resources/AppIcon/zencore.png",
     "title": "ZenDocs",
     "description": "ZenApps grew quickly. Installing and putting them in home screen is just massive space-wasting and time-wasting. ZenCore is the hero here, by centralizing all ZenApps in a single app.",
     "param": "/zencore"
   },
   {
-    "icon": "../../../resources/AppIcon/zencore.png",
+    "icon": "resources/AppIcon/zencore.png",
     "title": "ZenEngine",
     "description": "ZenApps grew quickly. Installing and putting them in home screen is just massive space-wasting and time-wasting. ZenCore is the hero here, by centralizing all ZenApps in a single app.",
     "param": "/zencore"
