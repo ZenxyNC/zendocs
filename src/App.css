@@ -1,0 +1,19 @@
+html, body {
+  background-color: var(--primary);
+  height: 100dvh;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  font-family: _medium;
+
+  --primary: rgb(15, 19, 26, 0.7);
+  --secondary: rgb(23, 28, 35, 0.8);
+
+  --white: #F5F5F5;
+  --secondary-white: rgba(245, 245, 245, 0.2);
+}

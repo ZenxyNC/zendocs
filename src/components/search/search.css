@@ -1,0 +1,81 @@
+#search-mainbody {
+  width: 100dvw;
+  height: 100dvh;
+
+  background-color: transparent;
+
+  color: #F5F5F5;
+}
+
+
+/*SEARCH BAR*/
+#searchbar-mainbody {
+  width: calc(100dvw - 60px);
+  height: 60px;
+
+  position: absolute;
+  bottom: clamp(500px, 40dvh, 550px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  background-color: transparent;
+}
+
+#searchbar-icon {
+  width: 32px;
+  aspect-ratio: 1/1;
+
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+#search-searchbar {
+  width: calc(100% - 50px - 2px);
+  height: calc(60px - 2px);
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px 0px 0px 50px;
+  z-index: 1;
+
+  border-radius: 16px;
+  border: 1px solid var(--secondary-white);
+
+  background-color: var(--secondary);
+  backdrop-filter: blur(16px);
+
+  color: var(--white);
+  font-family: _medium;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 834px) {
+  #searchbar-mainbody {
+    width: calc(40dvw);
+    min-width: 400px;
+    max-width: 600px;
+    height: 60px;
+
+    position: absolute;
+    bottom: calc(clamp(500px, 40dvh, 550px) + 28px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #search-searchbar {
+    width: calc(100% - 64px - 2px);
+    height: calc(60px - 2px);
+    padding: 0px 0px 0px 64px;
+
+    font-size: 20px;
+  }
+
+  #searchbar-icon {
+    left: 20px
+  }
+}
