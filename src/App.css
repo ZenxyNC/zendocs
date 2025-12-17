@@ -1,5 +1,5 @@
 html, body {
-  background-color: var(--primary);
+  background-color: #0F131A;
   height: 100dvh;
 }
 
@@ -16,4 +16,5 @@ html, body {
 
   --white: #F5F5F5;
   --secondary-white: rgba(245, 245, 245, 0.2);
+  --font-white: rgba(245, 245, 245, 0.5);
 }

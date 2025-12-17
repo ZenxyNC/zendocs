@@ -4,6 +4,7 @@ import SearchResultCard from "./searchResult-card"
 
 export default function SearchResult({ searchQuery }) {
   const [searchData, setSearchData] = useState([])
+  const [searchResult, setSearchResult] = useState([])
 
 
   async function fetchData() {
@@ -17,6 +18,10 @@ export default function SearchResult({ searchQuery }) {
   }, [])
 
   useEffect(() => {
+    setSearchResult(searchData)
+  }, [searchData])
+
+  useEffect(() => {
     if (!searchQuery) {
       fetchData();
       return
@@ -28,15 +33,15 @@ export default function SearchResult({ searchQuery }) {
     })
 
     if (filteredData.length === 0) {
-      setSearchData([])
+      setSearchResult([])
       return
     }
-    setSearchData(filteredData)
+    setSearchResult(filteredData)
   }, [searchQuery])
 
   return (
     <div id="searchResult-mainbody">
-      {searchData.length > 0 ? searchData.map((item, index) => (
+      {searchResult.length > 0 ? searchResult.map((item, index) => (
         <SearchResultCard
           key={index}
           icon={item.icon}

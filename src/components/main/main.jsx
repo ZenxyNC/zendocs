@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./main.css";
 import MainTitle from "./mainTitle/mainTitle";
+import Copyright from "../copyright/copyright";
 
 export default function Main({ setFaultyTerminal }) {
 
@@ -17,6 +18,7 @@ export default function Main({ setFaultyTerminal }) {
           navigateTo="Explore"
           navigateToParam="/search"
         />
+        <Copyright />
       </div>
     </>
   )

@@ -1,0 +1,23 @@
+#navbar-mainbody {
+  width: calc(100dvw - 60px - 2px);
+  height: 60px;
+
+  background-color: var(--primary);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid var(--secondary-white);
+  border-radius: 40px;
+
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 9;
+}
+
+@media screen and (min-width: 834px) {
+  #navbar-mainbody {
+    display: none;
+  }
+}
