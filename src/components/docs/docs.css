@@ -1,3 +1,16 @@
+/*Global Components*/
+
+#divider-mainbody {
+  width: 100%;
+  height: 3px;
+
+  background-color: var(--tertiary);
+
+  border-radius: 3px;
+}
+
+
+
 #docs-maindiv {
   width: calc(100dvw - 60px - 2px);
   height: max-content;
@@ -11,7 +24,46 @@
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 500px;
+  gap: 20px;
+}
+
+section h1 {
+  font-family: _bold;
+  font-size: 32px;
+  color: var(--white);
+
+  margin-bottom: 8px
+}
+section h2 {
+  font-family: _bold;
+  font-size: 28px;
+  color: var(--white);
+
+  margin-bottom: 8px;
+  margin-left: 28px;
+}
+
+section ul, section ol {
+  margin-left: 28px;
+} section li {
+  margin-bottom: 4px;
+}
+
+section p {
+  font-family: _regular;
+  font-size: 16px;
+  color: var(--white);
+
+  background-color: transparent;
+
+  line-height: 1.5;
+} section p.paragraph-h2 {
+  margin-left: 28px;
+  margin-bottom: 8px
+}
+
+section.docs-lastSection {
+  margin-bottom: 50dvh;
 }
 
 @media screen and (min-width: 834px) {
@@ -28,26 +80,25 @@
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 100px;
     padding-top: 60px;
   }
 }
 
 @media screen and (min-width: 1360px) {
   #docs-maindiv {
-    width: 40dvw;
+    width: 35dvw;
     height: max-content;
 
     position: absolute;
     top: 0px;
     left: unset;
-    right: calc((100dvw - clamp(270px, calc(31dvw - 2px), 350px) - 40dvw) / 2);
+    right: calc((100dvw - clamp(270px, calc(31dvw - 2px), 350px) - 35dvw) / 2);
 
     background-color: transparent;
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 500px;
     padding-top: 60px;
+    gap: 32px
   }
 }

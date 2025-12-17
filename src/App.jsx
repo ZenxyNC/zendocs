@@ -26,7 +26,7 @@ export default function App() {
         pageLoadAnimation={true}
         brightness={0.6}
       />}
-      <Router  basename="/zendocs">
+      <Router  basename="/zendocs/">
         <Routes>
           <Route path="/" element={<Main setFaultyTerminal={setFaultyTerminal}/>} />
           <Route path="/search" element={<Search setFaultyTerminal={setFaultyTerminal}/>} />
