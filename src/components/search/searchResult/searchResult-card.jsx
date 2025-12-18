@@ -12,7 +12,7 @@ export default function SearchResultCard({ icon, title, description, param }) {
         alt="AppIcon" 
         id="searchResultCard-icon"
       />
-      <div id="searchResultCard-title">
+      <div id="searchResultCard-title" translate="off">
         {title}
       </div>
       <div id="searchResultCard-description">

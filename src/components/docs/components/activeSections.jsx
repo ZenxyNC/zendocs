@@ -15,7 +15,7 @@ export default function useActiveSection() {
         });
       },
       {
-        rootMargin: "0px 0px -90% 0px", // focus zone: top 20% of viewport
+        rootMargin: "0px 0px -90% 0px", // focus zone: top 10% of viewport
         threshold: 0
       }
     );
@@ -24,5 +24,6 @@ export default function useActiveSection() {
     return () => observer.disconnect();
   }, []);
 
+  if(activeId === null) return "docs-projectTitle";
   return activeId;
 }

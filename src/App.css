@@ -15,6 +15,7 @@ html, body {
   --secondary: rgb(23, 28, 35, 0.8);
   --tertiary: rgb(23, 28, 35, 1);
 
+  --accent: #007AFF;
   --white: #F5F5F5;
   --secondary-white: rgba(245, 245, 245, 0.2);
   --font-white: rgba(245, 245, 245, 0.5);

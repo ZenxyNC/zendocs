@@ -3,7 +3,7 @@
   height: 60px;
 
   background-color: var(--primary);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px);
 
   border: 1px solid var(--secondary-white);
   border-radius: 40px;
@@ -16,8 +16,44 @@
   z-index: 9;
 }
 
+#navbar-zendocs {
+  width: max-content;
+  height: 60px;
+
+  position: absolute;
+  margin: 0px 0px 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background-color: transparent;
+  
+  color: var(--white);
+  font-family: _extrabold;
+  font-size: 20px;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+#navbar-img {
+  width: 44px;
+  height: 44px;
+}
+
+#navbar-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
 @media screen and (min-width: 834px) {
   #navbar-mainbody {
-    display: none;
+    opacity: 0;
+    display: none !important;
   }
 }
