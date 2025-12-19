@@ -4,5 +4,11 @@
     "title": "ZenCore",
     "description": "ZenApps grew quickly. Installing and putting them in home screen is just massive space-wasting and time-wasting. ZenCore is the hero here, by centralizing all ZenApps in a single app.",
     "param": "zencore"
+  },
+  {
+    "icon": "resources/AppIcon/zenengine.png",
+    "title": "ZenEngine",
+    "description": "Making all same functions and feature for each project might be tiring and time wasting. Let ZenEngine fix that. Providing light, efficient, and powerful module.",
+    "param": "zenengine"
   }
 ]
