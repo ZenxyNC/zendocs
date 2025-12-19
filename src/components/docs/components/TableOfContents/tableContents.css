@@ -81,6 +81,10 @@
   display: none
 }
 
+#TOC-items::-webkit-scrollbar {
+  width: 0px;
+}
+
 @media screen and (min-width: 834px) {
   #tableContents-mainbody {
     width: clamp(250px, calc(30dvw - 2px), 280px);
@@ -99,7 +103,14 @@
   }
 
   #TOC-items {
+    width: calc(100% - 2px - 32px);
     margin-top: 90px;
+    background-color: transparent;
+
+    height: calc(100% - 90px - 120px);
+
+    overflow-y: scroll;
+    overflow-x: hidden
   }
 
   #tocpath-mainbody {

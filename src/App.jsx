@@ -19,7 +19,7 @@ export default function App() {
         digitSize={1.2}
         scanlineIntensity={0.5}
         noiseAmp={1}
-        curvature={0}
+        curvature={0.1}
         tint={faultyTerminal}
         mouseReact={true}
         mouseStrength={0.5}

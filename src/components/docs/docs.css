@@ -70,12 +70,12 @@ section p, section div {
 }
 
 section.docs-lastSection {
-  margin-bottom: 50dvh;
+  margin-bottom: 12px;
 }
 
 @media screen and (min-width: 834px) {
   #docs-maindiv {
-    width: calc(95dvw - calc(clamp(250px, calc(30dvw - 2px), 270px) + 120px));
+    width: calc(90dvw - calc(clamp(250px, calc(30dvw - 2px), 270px) + 120px));
     height: max-content;
 
     position: absolute;
@@ -88,6 +88,10 @@ section.docs-lastSection {
     display: flex;
     flex-direction: column;
     padding-top: 60px;
+  }
+
+  section.docs-lastSection {
+    margin-bottom: 40dvh;
   }
 }
 

@@ -42,13 +42,12 @@ export default function ZenCoreDocs() {
         <div className="paragraph-h2">
           <ul>
             <li>React</li>
-            <li>React Router</li>
           </ul>
         </div>
         <h2>Dependencies</h2>
         <div className="paragraph-h2">
           <ul>
-            <li>ReactBits</li>
+            <li>React Bits</li>
             <li>ogl</li>
             <li>react-router-dom</li>
             <li>gh-pages</li>
