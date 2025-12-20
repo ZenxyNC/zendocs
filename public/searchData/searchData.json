@@ -16,5 +16,17 @@
     "title": "ZenClock",
     "description": "Need a screen saver and clock at the same time? ZenClock is perfect. It is a clock app with multiple unique backgrounds you can choose. Find cool ui and features at once in ZenClock.",
     "param": "zenclock"
+  },
+  {
+    "icon": "resources/AppIcon/githelper.png",
+    "title": "GitHelper",
+    "description": "Most common GitHub problem is 404 error, a lot of deploying and committing commands. With GitHelper, you can fix these issues with only copy-paste.",
+    "param": "githelper"
+  },
+  {
+    "icon": "resources/AppIcon/zendocs.png",
+    "title": "ZenDocs",
+    "description": "ZenDocs is an image of taking coding documentation to the next level. ZenDocs contains full documentation of all ZenApps.",
+    "param": "zendocs"
   }
 ]

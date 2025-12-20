@@ -4,6 +4,14 @@ import { Divider } from "./global.docs.component"
 export default function ZenDocsDocs() {
   const changelogs = [
     {
+      version: "1.2.2",
+      date: "Dec 20, 2025",
+      changes: [
+        "Patch search engine missing datas",
+        "Patch in-app version"
+      ]
+    },
+    {
       version: "1.2.1",
       date: "Dec 20, 2025",
       changes: [
