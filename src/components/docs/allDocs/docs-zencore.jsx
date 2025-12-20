@@ -1,3 +1,4 @@
+import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenCoreDocs() {
@@ -7,13 +8,13 @@ export default function ZenCoreDocs() {
         <h1>ZenCore</h1>
         <div>The core to connects, secures, and centralize entire ZenEcosystem in one place.</div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-overview" data-toc="Overview">
         <h1>Overview</h1>
         <div>ZenApps grew quickly. Installing and putting them in home screen is just massive space-wasting and time-wasting. ZenCore is the hero here, by centralizing all ZenApps in a single app.</div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-features" data-toc="Features">
         <h1>Features</h1>
@@ -26,7 +27,7 @@ export default function ZenCoreDocs() {
           </ul>
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-techStack" data-toc="Tech Stack">
         <h1>Tech Stack</h1>
@@ -48,13 +49,13 @@ export default function ZenCoreDocs() {
         <div className="paragraph-h2">
           <ul>
             <li>React Bits</li>
-            <li>ogl</li>
+            <li>three</li>
             <li>react-router-dom</li>
             <li>gh-pages</li>
           </ul>
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-technicalOverview" data-toc="Technical Overview">
         <h1>Technical Overview</h1>
@@ -62,7 +63,7 @@ export default function ZenCoreDocs() {
           This project built with react + JavaScript as the main framework. ZenCore allowing ZenApps to use logged-in account automatically, as ZenCore allowing ZenApps to connect to each other which makes ZenApps a ZenEcosystem. For security reasons, ZenCore is using browser's local storage to store user's account, settings, and other data.
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-usage" data-toc="Usage">
         <h1>Usage</h1>
@@ -85,7 +86,7 @@ export default function ZenCoreDocs() {
           </div>
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-roadmap" data-toc="Roadmap">
         <h1>Roadmap</h1>
@@ -109,17 +110,17 @@ export default function ZenCoreDocs() {
           </div>
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-license" data-toc="License">
         <h1>License</h1>
         <div>
           <ul>
-            <li>Copyright © 2025 ZenApps. All rights reserved.</li>
+            <li>Copyright © 2025 ZenTech. All rights reserved.</li>
           </ul>
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-credits" data-toc="Credits">
         <h1>Credits</h1>
@@ -146,60 +147,80 @@ export default function ZenCoreDocs() {
           </ul>
         </div>
       </section>
-      <Divider/>
+      <Divider />
 
       <section id="docs-changelogs" className="docs-lastSection" data-toc="Changelogs">
         <h1>Changelogs</h1>
-        <h2>Version 2.2.1 [Dec 14, 2025]</h2>
-        <div className="paragraph-h2">
+        <Changelog
+          version="2.2.1"
+          date="Dec 14, 2025"
+        >
           <ul>
             <li>ZenScreen replaced by ZenClock</li>
             <li>GH Cmd Gen replaced by GitHelper</li>
           </ul>
-        </div>
-        <h2>Version 2.2.0 [Dec 12, 2025]</h2>
-        <div className="paragraph-h2">
+        </Changelog>
+
+        <Changelog
+          version="2.2.0"
+          date="Dec 12, 2025"
+        >
           <ul>
             <li>Added "Open project in" in Settings</li>
             <li>Fixed and optimized "Recently Visited"</li>
             <li>Code refactor and optimization</li>
           </ul>
-        </div>
-        <h2>Version 2.1.0 [Dec 11, 2025]</h2>
-        <div className="paragraph-h2">
+        </Changelog>
+
+        <Changelog
+          version="2.1.0"
+          date="Dec 11, 2025"
+        >
           <ul>
             <li>Added "Open at start" in Settings</li>
             <li>New animated background</li>
             <li>Performance optimization</li>
             <li>Removed Quick Actions in Home</li>
           </ul>
-        </div>
-        <h2>Version 2.0.2 [Jul 22, 2025]</h2>
-        <div className="paragraph-h2">
+        </Changelog>
+
+        <Changelog
+          version="2.0.2"
+          date="Jul 22, 2025"
+        >
           <ul>
             <li>Fixed some security issues</li>
           </ul>
-        </div>
-        <h2>Version 2.0.1 [Jun 20, 2025]</h2>
-        <div className="paragraph-h2">
+        </Changelog>
+
+        <Changelog
+          version="2.0.1"
+          date="Jun 20, 2025"
+        >
           <ul>
             <li>Fix routing and redirection bugs</li>
             <li>Added 404 (not found) page.</li>
           </ul>
-        </div>
-        <h2>Version 2.0.0 [June 19, 2025]</h2>
-        <div className="paragraph-h2">
+        </Changelog>
+
+        <Changelog
+          version="2.0.0"
+          date="Jun 19, 2025"
+        >
           <ul>
             <li>Rebuilded the entire project</li>
             <li>Updated theme and animated background</li>
           </ul>
-        </div>
-        <h2>Version 1.0.0 [Jun 6, 2025]</h2>
-        <div className="paragraph-h2">
+        </Changelog>
+
+        <Changelog
+          version="1.0.0"
+          date="Jun 6, 2025"
+        >
           <ul>
             <li>Initial release</li>
           </ul>
-        </div>
+        </Changelog>
       </section>
     </>
   )

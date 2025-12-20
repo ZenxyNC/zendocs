@@ -28,13 +28,13 @@ export default function TableContents({ ToCOpen }) {
   return (
     <>
       <div id="tableContents-mainbody" className={ToCOpen ? "open" : ""}>
-        <div 
+        <div
           id='TOC-zendocs'
           onClick={() => navigate("/")}
         >
-          <img 
-            src={import.meta.env.BASE_URL + "resources/ZenDocs-plain.svg"} 
-            alt="" 
+          <img
+            src={import.meta.env.BASE_URL + "/zendocs-plain.svg"}
+            alt=""
             id='TOC-img'
           />
           <span>ZenDocs</span>
@@ -51,7 +51,7 @@ export default function TableContents({ ToCOpen }) {
           ))}
         </div>
         <div id="tableContents-copyright" translate="no">
-          Copyright © 2025 ZenApps. All Rights Reserved.
+          Copyright © 2025 ZenTech. All Rights Reserved.
         </div>
       </div>
     </>

@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom"
 // DOCS
 import ZenCoreDocs from "./allDocs/docs-zencore"
 import ZenEngineDocs from "./allDocs/docs-zenengine"
-
+import ZenClockDocs from "./allDocs/docs-zenclock"
+import GitHelperDocs from "./allDocs/docs-GitHelper"
+import ZenDocsDocs from "./allDocs/docs-zendocs"
 
 export default function Docs({ setFaultyTerminal }) {
   const { project } = useParams();
@@ -25,6 +27,21 @@ export default function Docs({ setFaultyTerminal }) {
       param: "zenengine",
       title: "ZenEngine",
       component: <ZenEngineDocs />
+    },
+    {
+      param: "zenclock",
+      title: "ZenClock",
+      component: <ZenClockDocs />
+    },
+    {
+      param: "githelper",
+      title: "GitHelper",
+      component: <GitHelperDocs />
+    },
+    {
+      param: "zendocs",
+      title: "ZenDocs",
+      component: <ZenDocsDocs />
     }
   ]
 

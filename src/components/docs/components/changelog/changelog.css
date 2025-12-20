@@ -86,7 +86,7 @@
   }
 
   #changelog-divider {
-    width: 3px;
+    width: 2px;
     height: calc(100% - 40px);
 
     background-color: var(--secondary-white);

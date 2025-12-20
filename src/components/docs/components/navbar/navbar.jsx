@@ -10,7 +10,7 @@ export default function Navbar({ ToCOpen, setToCOpen }) {
         onClick={() => navigate("/")}
       >
         <img 
-          src={import.meta.env.BASE_URL + "resources/ZenDocs-plain.svg"} 
+          src={import.meta.env.BASE_URL + "/zendocs-plain.svg"} 
           alt="" 
           id='navbar-img'
         />

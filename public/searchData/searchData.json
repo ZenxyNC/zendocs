@@ -10,5 +10,11 @@
     "title": "ZenEngine",
     "description": "Making all same functions and feature for each project might be tiring and time wasting. Let ZenEngine fix that. Providing light, efficient, and powerful module.",
     "param": "zenengine"
+  },
+  {
+    "icon": "resources/AppIcon/zenclock.png",
+    "title": "ZenClock",
+    "description": "Need a screen saver and clock at the same time? ZenClock is perfect. It is a clock app with multiple unique backgrounds you can choose. Find cool ui and features at once in ZenClock.",
+    "param": "zenclock"
   }
 ]

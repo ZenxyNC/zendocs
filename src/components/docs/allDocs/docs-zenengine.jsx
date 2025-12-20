@@ -139,17 +139,17 @@ export default function ZenEngineDocs() {
       <section id="docs-changelogs" className="docs-lastSection" data-toc="Changelogs">
         <h1>Changelogs</h1>
         <Changelog
-          version="2.0.0"
+          version="2.2.1"
           date="Dec 15, 2025"
         >
           <ul>
-            <li>ZenEngine v2.0.0 Final Release</li>
+            <li>ZenEngine v2.2.1 Final Release</li>
             <li>Fix missing icon</li>
           </ul>
         </Changelog>
 
         <Changelog
-          version="2.2.0 BETA"
+          version="2.2.0-beta.3"
           date="Aug 24, 2025"
         >
           <ul>
@@ -158,7 +158,7 @@ export default function ZenEngineDocs() {
         </Changelog>
 
         <Changelog
-          version="2.1.0 BETA"
+          version="2.1.0-beta.2"
           date="Aug 23, 2025"
         >
           <ul>
@@ -167,7 +167,7 @@ export default function ZenEngineDocs() {
         </Changelog>
 
         <Changelog
-          version="2.0.0 BETA"
+          version="2.0.0-beta.1"
           date="Aug 20, 2025"
         >
           <ul>

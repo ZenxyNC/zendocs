@@ -3,7 +3,7 @@ import './changelog.css'
 
 export default function Changelog({version = "0.0.0", date = "Sep 29, 1998", children}) {
 
-  const isBeta = useRef(version.includes("BETA") ? true : false)
+  const isBeta = useRef(version.includes("beta") ? true : false)
 
   return (
     <div id='changelog-mainbody' className={isBeta.current ? 'isBeta' : ''}>
