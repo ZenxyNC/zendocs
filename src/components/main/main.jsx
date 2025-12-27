@@ -7,6 +7,7 @@ export default function Main({ setFaultyTerminal }) {
 
   useEffect(() => {
     setFaultyTerminal("#a7ef9e")
+    document.title = "ZenDocs"
   }, [])
 
   return (

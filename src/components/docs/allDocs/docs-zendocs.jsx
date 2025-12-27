@@ -1,8 +1,21 @@
+import AppStatus from "../components/appstatus/appstatus"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenDocsDocs() {
   const changelogs = [
+    {
+      version: "1.3.0",
+      date: "Dec 27, 2025",
+      changes: [
+        "Updated ZenCore Docs",
+        "Added ZenGuard Docs",
+        "Patch overflowing text in changelogs",
+        "Patch document title not changing",
+        "Added app status",
+
+      ]
+    },
     {
       version: "1.2.2",
       date: "Dec 20, 2025",
@@ -73,6 +86,7 @@ export default function ZenDocsDocs() {
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenDocs</h1>
+        <AppStatus status="Maintained"/>
         <div>Know more about ZenApps from inside.</div>
       </section>
       <Divider />

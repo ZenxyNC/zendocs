@@ -17,6 +17,8 @@ html, body {
 
   --accent: #007AFF;
   --yellow: #FFCC00;
+  --green: #33FF33;
+  --red: rgb(233, 21, 45);
   --secondary-yellow: rgba(255, 204, 0, 0.2);
   --white: #F5F5F5;
   --secondary-white: rgba(245, 245, 245, 0.2);

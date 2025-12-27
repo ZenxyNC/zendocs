@@ -28,5 +28,11 @@
     "title": "ZenDocs",
     "description": "ZenDocs is an image of taking coding documentation to the next level. ZenDocs contains full documentation of all ZenApps.",
     "param": "zendocs"
+  },
+  {
+    "icon": "resources/AppIcon/zenguard.png",
+    "title": "ZenGuard",
+    "description": "ZenGuard, ZenEcosystem main security protocol. Explore the latest security technology and secure your information seamlessly with ZenGuard. Being protected in seamless by ZenGuard.",
+    "param": "zenguard"
   }
 ]

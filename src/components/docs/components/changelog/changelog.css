@@ -68,7 +68,8 @@
 
   #changelog-content {
     position: relative;
-    left: calc(110px + 36px)
+    left: calc(110px + 36px);
+    max-width: calc(100% - 146px);
   }
 
   #changelog-aboutVersion {

@@ -1,11 +1,87 @@
+import AppStatus from "../components/appstatus/appstatus"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenEngineDocs() {
+  const changelogs = [
+    {
+      version: "2.2.1",
+      date: "Dec 15, 2025",
+      changes: [
+        "ZenEngine v2.2.1 Final Release",
+        "Fix missing icon"
+      ]
+    },
+    {
+      version: "2.2.0-beta.3",
+      date: "Aug 24, 2025",
+      changes: [
+        "Submit Ideas page done"
+      ]
+    },
+    {
+      version: "2.2.0-beta.2",
+      date: "Aug 23, 2025",
+      changes: [
+        "Landing Page done"
+      ]
+    },
+    {
+      version: "2.2.0-beta.1",
+      date: "Aug 20, 2025",
+      changes: [
+        "Initialize Project",
+        "Rebuilded the entire project"
+      ]
+    },
+    {
+      version: "1.4.0",
+      date: "Mar 28, 2025",
+      changes: [
+        "Landing Page done",
+        "Modules Page done",
+        "Added Snackbar in modules"
+      ]
+    },
+    {
+      version: "1.3.0",
+      date: "Mar 28, 2025",
+      changes: [
+        "Landing Page done",
+        "Modules Page almost done"
+      ]
+    },
+    {
+      version: "1.2.0",
+      date: "Mar 27, 2025",
+      changes: [
+        "Modules Page added (Unfinished)",
+        "Landing almost done"
+      ]
+    },
+    {
+      version: "1.1.0",
+      date: "Mar 25, 2025",
+      changes: [
+        "Fixed some bugs",
+        "Added new features (unspecified)",
+        "App icon updated",
+        "404 error fixed"
+      ]
+    },
+    {
+      version: "1.0.0",
+      date: "Mar 25, 2025",
+      changes: [
+        "Initial release"
+      ]
+    }
+  ]
   return (
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenEngine</h1>
+        <AppStatus status="Maintained"/>
         <div>ZenEngine, an compact and easy-to-use module for React web applications.</div>
       </section>
       <Divider />
@@ -138,95 +214,19 @@ export default function ZenEngineDocs() {
 
       <section id="docs-changelogs" className="docs-lastSection" data-toc="Changelogs">
         <h1>Changelogs</h1>
-        <Changelog
-          version="2.2.1"
-          date="Dec 15, 2025"
-        >
-          <ul>
-            <li>ZenEngine v2.2.1 Final Release</li>
-            <li>Fix missing icon</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.2.0-beta.3"
-          date="Aug 24, 2025"
-        >
-          <ul>
-            <li>Submit Ideas Page done</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.1.0-beta.2"
-          date="Aug 23, 2025"
-        >
-          <ul>
-            <li>Landing Page done</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.0.0-beta.1"
-          date="Aug 20, 2025"
-        >
-          <ul>
-            <li>Initialize Project</li>
-            <li>Rebuilded the entire project</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="1.4.0"
-          date="Mar 28, 2025"
-        >
-          <ul>
-            <li>Landing Page done</li>
-            <li>Modules Page done</li>
-            <li>Added snackbar in modules</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="1.3.0"
-          date="Mar 28, 2025"
-        >
-          <ul>
-            <li>Landing Page done</li>
-            <li>Modules Page almost done</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="1.2.0"
-          date="Mar 27, 2025"
-        >
-          <ul>
-            <li>Modules Page added (Unfinished)</li>
-            <li>Landing almost done</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="1.1.0"
-          date="Mar 25, 2025"
-        >
-          <ul>
-            <li>Fixed some bugs</li>
-            <li>Added new features (unspecified)</li>
-            <li>App icon updated</li>
-            <li>404 error fixed</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="1.0.0"
-          date="Mar 25, 2025"
-        >
-          <ul>
-            <li>Initial release (Unfinished)</li>
-          </ul>
-        </Changelog>
+        {changelogs.map((changelog, index) => (
+          <Changelog
+            key={index}
+            version={changelog.version}
+            date={changelog.date}
+          >
+            <ul>
+              {changelog.changes.map((change, index) => (
+                <li key={index}>{change}</li>
+              ))}
+            </ul>
+          </Changelog>
+        ))}
       </section>
     </>
   )

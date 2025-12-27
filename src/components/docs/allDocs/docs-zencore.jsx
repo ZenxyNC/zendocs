@@ -1,11 +1,87 @@
+import AppStatus from "../components/appstatus/appstatus"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenCoreDocs() {
+  const changelogs = [
+    {
+      version: "2.2.3",
+      date: "Dec 27, 2025",
+      changes: [
+        "Patch ZenGuard Failure Error"
+      ]
+    },
+    {
+      version: "2.2.2",
+      date: "Dec 27, 2025",
+      changes: [
+        "Added ZenDocs",
+        "Changed localStorage ID"
+      ]
+    },
+    {
+      version: "2.2.1",
+      date: "Dec 14, 2025",
+      changes: [
+        "Patch missing icon",
+        "Patch in-app version"
+      ]
+    },
+    {
+      version: "2.2.0",
+      date: "Dec 12, 2025",
+      changes: [
+        "Added Open Project In setting",
+        "Fixed and optimized Recently Visited",
+        "Code refactor and optimization"
+      ]
+    },
+    {
+      version: "2.1.0",
+      date: "Dec 11, 2025",
+      changes: [
+        "Added Open At Start setting",
+        "New animated background",
+        "Performance optimization",
+        "Removed Quick Actions in Home"
+      ]
+    },
+    {
+      version: "2.0.2",
+      date: "Jul 22, 2025",
+      changes: [
+        "Fixed minor security issue"
+      ]
+    },
+    {
+      version: "2.0.1",
+      date: "Jun 20, 2025",
+      changes: [
+        "Fix routing and redirection bugs",
+        "Added 404 page"
+      ]
+    },
+    {
+      version: "2.0.0",
+      date: "Jun 19, 2025",
+      changes: [
+        "Rebuild the entire project",
+        "Updated theme and animated background",
+      ]
+    },
+    {
+      version: "1.0.0",
+      date: "Jun 6, 2025",
+      changes: [
+        "Initial release"
+      ]
+    }
+  ]
   return (
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenCore</h1>
+        <AppStatus status="Maintained"/>
         <div>The core to connects, secures, and centralize entire ZenEcosystem in one place.</div>
       </section>
       <Divider />
@@ -151,76 +227,19 @@ export default function ZenCoreDocs() {
 
       <section id="docs-changelogs" className="docs-lastSection" data-toc="Changelogs">
         <h1>Changelogs</h1>
-        <Changelog
-          version="2.2.1"
-          date="Dec 14, 2025"
-        >
-          <ul>
-            <li>ZenScreen replaced by ZenClock</li>
-            <li>GH Cmd Gen replaced by GitHelper</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.2.0"
-          date="Dec 12, 2025"
-        >
-          <ul>
-            <li>Added "Open project in" in Settings</li>
-            <li>Fixed and optimized "Recently Visited"</li>
-            <li>Code refactor and optimization</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.1.0"
-          date="Dec 11, 2025"
-        >
-          <ul>
-            <li>Added "Open at start" in Settings</li>
-            <li>New animated background</li>
-            <li>Performance optimization</li>
-            <li>Removed Quick Actions in Home</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.0.2"
-          date="Jul 22, 2025"
-        >
-          <ul>
-            <li>Fixed some security issues</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.0.1"
-          date="Jun 20, 2025"
-        >
-          <ul>
-            <li>Fix routing and redirection bugs</li>
-            <li>Added 404 (not found) page.</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="2.0.0"
-          date="Jun 19, 2025"
-        >
-          <ul>
-            <li>Rebuilded the entire project</li>
-            <li>Updated theme and animated background</li>
-          </ul>
-        </Changelog>
-
-        <Changelog
-          version="1.0.0"
-          date="Jun 6, 2025"
-        >
-          <ul>
-            <li>Initial release</li>
-          </ul>
-        </Changelog>
+        {changelogs.map((changelog, index) => (
+          <Changelog
+            key={index}
+            version={changelog.version}
+            date={changelog.date}
+          >
+            <ul>
+              {changelog.changes.map((change, index) => (
+                <li key={index}>{change}</li>
+              ))}
+            </ul>
+          </Changelog>
+        ))}
       </section>
     </>
   )

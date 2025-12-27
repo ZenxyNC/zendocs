@@ -4,7 +4,8 @@ import MainTitle from "../main/mainTitle/mainTitle"
 
 export default function NotFound({ setFaultyTerminal }) {
   useEffect(() => {
-    setFaultyTerminal("#FF393D")
+    setFaultyTerminal("#FF393D");
+    document.title = "ZenDocs — Not Found"
   }, []);
 
   const prompts = [

@@ -1,11 +1,50 @@
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
+import AppStatus from "../components/appstatus/appstatus"
 
 export default function ZenClockDocs() {
+  const changelogs = [
+    {
+      version: "1.2.0",
+      date: "Dec 13, 2025",
+      changes: [
+        "ZenClock final release",
+        "New font: Bodoni Moda",
+        "Added keep awake",
+        "Adjusted clock gap"
+      ]
+    },
+    {
+      version: "1.1.0-beta.1",
+      date: "Dec 13, 2025",
+      changes: [
+        "404 and routing fix",
+        "Updated metadata",
+        "Settings almost done",
+        "Added 4 new backgrounds"
+      ]
+    },
+    {
+      version: "1.0.1-beta.2",
+      date: "Dec 13, 2025",
+      changes: [
+        "Fix route",
+        "Added icon"
+      ]
+    },
+    {
+      version: "1.0.0-beta.1",
+      date: "Dec 12, 2025",
+      changes: [
+        "Initial release"
+      ]
+    }
+  ]
   return (
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenClock</h1>
+        <AppStatus status="Maintained" />
         <div>ZenClock, a clock with unique backgrounds.</div>
       </section>
       <Divider />
@@ -145,45 +184,19 @@ export default function ZenClockDocs() {
 
       <section id="docs-changelogs" className="docs-lastSection" data-toc="Changelogs">
         <h1>Changelogs</h1>
-        <Changelog
-          version="1.2.0"
-          date="Dec 13, 2025"
-        >
-          <ul>
-            <li>ZenClock final release</li>
-            <li>New font: Bodoni Moda</li>
-            <li>Added keep awake</li>
-            <li>Adjusted clock gap</li>
-          </ul>
-        </Changelog>
-        <Changelog
-          version="1.1.0-beta.1"
-          date="Dec 13, 2025"
-        >
-          <ul>
-            <li>404 and routing fix</li>
-            <li>Updated metadata</li>
-            <li>Settings almost done</li>
-            <li>Added 4 new backgrounds</li>
-          </ul>
-        </Changelog>
-        <Changelog
-          version="1.0.1-beta.2"
-          date="Dec 13, 2025"
-        >
-          <ul>
-            <li>Fix route</li>
-            <li>Added icon</li>
-          </ul>
-        </Changelog>
-        <Changelog
-          version="1.0.0-beta.1"
-          date="Dec 12, 2025"
-        >
-          <ul>
-            <li>Initial release</li>
-          </ul>
-        </Changelog>
+        {changelogs.map((changelog, index) => (
+          <Changelog
+            key={index}
+            version={changelog.version}
+            date={changelog.date}
+          >
+            <ul>
+              {changelog.changes.map((change, index) => (
+                <li key={index}>{change}</li>
+              ))}
+            </ul>
+          </Changelog>
+        ))}
       </section>
     </>
   )

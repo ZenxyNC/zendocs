@@ -2,7 +2,7 @@
   "homepage": "https://zenxync.github.io/zendocs/",
   "name": "zendocs",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.3.0",
   "type": "module",
   "scripts": {
     "deploy": "gh-pages -d dist",
