@@ -1,4 +1,5 @@
 import AppStatus from "../components/appstatus/appstatus"
+import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
@@ -92,8 +93,11 @@ export default function ZenEngineDocs() {
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenEngine</h1>
-        <AppStatus status="Maintained"/>
-        <div>ZenEngine, an compact and easy-to-use module for React web applications.</div>
+        <div style={{display: "flex", gap: "12px"}}>
+          <AppStatus status="Maintained"/>
+          <AppVersion version={changelogs[0].version} />
+        </div>
+        <div>ZenEngine, a compact and easy-to-use module for React web applications.</div>
       </section>
       <Divider />
 
@@ -135,6 +139,7 @@ export default function ZenEngineDocs() {
         <div className="paragraph-h2">
           <ul>
             <li>React Bits</li>
+            <li>React Syntax Highlighter</li>
             <li>React Router</li>
             <li>ogl</li>
             <li>gh-pages</li>
@@ -160,9 +165,9 @@ export default function ZenEngineDocs() {
           <div className="paragraph-h2">
             After you've copied the JavaScript code, you can now copy the CSS code from the section with title "CSS" and paste it to the CSS file you've created.
           </div>
-          <h2>Usage</h2>
+          <h2>Call</h2>
           <div className="paragraph-h2">
-            After you've copied the JavaScript and CSS code, you can now use ZenEngine in your project. You can call the module by using codes in section with title "Usage".
+            After you've copied the JavaScript and CSS code, you can now use ZenEngine in your project. You can call the module by using codes in section with title "Call".
           </div>
         </div>
       </section>
@@ -209,7 +214,8 @@ export default function ZenEngineDocs() {
           <ul>
             <li>React</li>
             <li>React Router</li>
-            <li>ReactBits</li>
+            <li>React Bits</li>
+            <li>React Syntax Highlighter</li>
             <li>ogl (Open Graphic Library)</li>
             <li>gh-pages (deployment)</li>
           </ul>

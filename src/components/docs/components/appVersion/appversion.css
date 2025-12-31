@@ -1,0 +1,23 @@
+#appVersion-mainbody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: max-content;
+  height:max-content;
+  padding: 4px 12px 4px 12px;
+
+  background-color: var(--secondary);
+
+  border-radius: 30px;
+
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+#appVersion-version {
+  color: var(--color);
+  font-family: _semibold;
+}
+
+

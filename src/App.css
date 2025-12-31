@@ -16,10 +16,14 @@ html, body {
   --tertiary: rgb(23, 28, 35, 1);
 
   --accent: #007AFF;
+  --accent-transparent: rgb(0, 122, 255, 0.16);
   --yellow: #FFCC00;
-  --green: #33FF33;
-  --red: rgb(233, 21, 45);
+  --yellow-transparent: rgb(255, 204, 0, 0.16);
   --secondary-yellow: rgba(255, 204, 0, 0.2);
+  --green: #33FF33;
+  --green-transparent: rgba(51, 255, 51, 0.16);
+  --red: #e9152d;
+  --red-transparent: rgba(233, 21, 45, 0.16);
   --white: #F5F5F5;
   --secondary-white: rgba(245, 245, 245, 0.2);
   --font-white: rgba(245, 245, 245, 0.5);

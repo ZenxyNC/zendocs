@@ -1,6 +1,7 @@
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 import AppStatus from "../components/appstatus/appstatus"
+import AppVersion from "../components/appVersion/appversion"
 
 export default function ZenClockDocs() {
   const changelogs = [
@@ -44,7 +45,10 @@ export default function ZenClockDocs() {
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenClock</h1>
-        <AppStatus status="Maintained" />
+        <div style={{display: "flex", gap: "12px"}}>
+          <AppStatus status="Maintained"/>
+          <AppVersion version={changelogs[0].version} />
+        </div>
         <div>ZenClock, a clock with unique backgrounds.</div>
       </section>
       <Divider />

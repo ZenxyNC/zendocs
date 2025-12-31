@@ -9,12 +9,27 @@
 
   background-color: var(--primary-color);
 
-  border: 1px solid var(--secondary-white);
   border-radius: 30px;
 
   overflow: hidden;
   margin-bottom: 8px;
 }
+
+#appStatus-mainbody.Maintained {
+  background-color: var(--accent-transparent);
+}
+
+#appStatus-mainbody.Slowed {
+  background-color: var(--yellow-transparent);
+}
+
+#appStatus-mainbody.Stopped,
+#appStatus-mainbody.Abandoned {
+  background-color: var(--red-transparent);
+}
+
+
+
 
 #appStatus-indicator {
   width: 12px;
@@ -24,23 +39,20 @@
   margin-right: 10px;
 
   background-color: var(--accent);
-  box-shadow: 0px 0px 36px 8px var(--accent);
 }
 
 #appStatus-indicator.Maintained {
   background-color: var(--accent);
-  box-shadow: 0px 0px 36px 8px var(--accent);
 }
 
 #appStatus-indicator.Slowed {
   background-color: var(--yellow);
-  box-shadow: 0px 0px 36px 8px var(--yellow);
 }
 
 #appStatus-indicator.Stopped,
 #appStatus-indicator.Abandoned {
   background-color: var(--red);
-  box-shadow: 0px 0px 36px 8px var(--red);
+
 }
 
 #appStatus-status {

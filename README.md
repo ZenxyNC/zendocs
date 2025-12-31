@@ -1,16 +1,87 @@
-# React + Vite
+# [!] NOTICE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This documentation is taken from ZenDocs. For better documentation, please visit [ZenDocs](https://zenxync.github.io/zendocs/docs/zendocs).
 
-Currently, two official plugins are available:
+# ZenDocs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Know more about ZenApps from inside.
 
-## React Compiler
+# Overview
+ZenDocs is an image of taking coding documentation to the next level. ZenDocs contains full documentation of all ZenApps.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+# Features
+- Search through all ZenApps
+- See detailed ZenApps documentation
+- See changelogs
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Languages
+
+- HTML
+- CSS
+- JavaScript
+
+## Frameworks
+
+- React
+
+## Dependencies
+
+- React Router
+- React Syntax Highlighter
+- ogl
+- gh-pages
+
+# Technical Overview
+
+ZenDocs built using ReactJS + Vite as the main framework. ZenDocs using React Router to navigate between pages, ogl to animate landing page. ZenDocs UI is designed to be simple and easy to use. User can search, see details, and see changelogs of all ZenApps.
+
+# Usage
+## Landing Page
+
+Landing page is a page that contains a search bar to search through all ZenApps. It also has a "Explore" button to navigate to search page.
+
+## Search
+
+Search page contains a search bar to search through all ZenApps. Type name of the ZenApp you want to find, then click on the card to see the documentation.
+
+## Documentation
+
+In documentation page, you can see detailed documentation of the ZenApp you selected. It has Table of Contents to navigate between sections.
+
+# Roadmap
+
+## Back-end Integration
+
+I'm planning to create backend for ZenDocs for dynamic documentation adding.
+
+## AI Overview
+
+I'm planning to create AI overview for ZenDocs to help user understand about ZenApps.
+
+## AI Search
+
+I'm planning to create AI search for ZenDocs to help user find ZenApps. This will allow the system to find correct ZenApps even the word they input is misspelled or in description sentence.
+
+# License
+
+Copyright © 2025 ZenTech. All rights reserved.
+
+# Credits
+
+## Contributor
+
+- [Creator & Maintainer] Lucas Harel
+
+## Dependencies & Frameworks
+
+- React
+- React Router
+- React Syntax Highlighter
+- ZenEngine
+- gh-pages
+
+## Assets
+
+- [Font Family] Plus Jakarta Sans

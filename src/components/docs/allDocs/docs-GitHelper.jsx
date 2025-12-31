@@ -1,4 +1,5 @@
 import AppStatus from "../components/appstatus/appstatus"
+import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
@@ -16,7 +17,10 @@ export default function GitHelperDocs() {
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>GitHelper</h1>
-        <AppStatus status="Maintained"/>
+        <div style={{display: "flex", gap: "12px"}}>
+          <AppStatus status="Maintained"/>
+          <AppVersion version={changelogs[0].version} />
+        </div>
         <div>GitHelper, a tool to help you with git commands. Helps you fix 404, deploying, and committing to GitHub.</div>
       </section>
       <Divider />

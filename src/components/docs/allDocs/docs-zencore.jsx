@@ -1,4 +1,5 @@
 import AppStatus from "../components/appstatus/appstatus"
+import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
@@ -81,7 +82,10 @@ export default function ZenCoreDocs() {
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenCore</h1>
-        <AppStatus status="Maintained"/>
+        <div style={{display: "flex", gap: "12px"}}>
+          <AppStatus status="Maintained"/>
+          <AppVersion version={changelogs[0].version} />
+        </div>
         <div>The core to connects, secures, and centralize entire ZenEcosystem in one place.</div>
       </section>
       <Divider />

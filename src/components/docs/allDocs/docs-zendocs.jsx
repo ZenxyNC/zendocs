@@ -1,9 +1,20 @@
 import AppStatus from "../components/appstatus/appstatus"
+import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenDocsDocs() {
   const changelogs = [
+    {
+      version: "1.4.0",
+      date: "Dec 31, 2025",
+      changes: [
+        "Redesigned App Status tag",
+        "Added Latest Version tag",
+        "Added code embedding",
+        "Revised README.md"
+      ]
+    },
     {
       version: "1.3.1",
       date: "Dec 31, 2025",
@@ -93,7 +104,10 @@ export default function ZenDocsDocs() {
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>ZenDocs</h1>
-        <AppStatus status="Maintained"/>
+        <div style={{display: "flex", gap: "12px"}}>
+          <AppStatus status="Maintained"/>
+          <AppVersion version={changelogs[0].version} />
+        </div>
         <div>Know more about ZenApps from inside.</div>
       </section>
       <Divider />
@@ -136,6 +150,7 @@ export default function ZenDocsDocs() {
         <div className="paragraph-h2">
           <ul>
             <li>React Router</li>
+            <li>React Syntax Highlighter</li>
             <li>ogl</li>
             <li>gh-pages</li>
           </ul>
@@ -210,6 +225,7 @@ export default function ZenDocsDocs() {
           <ul>
             <li>React</li>
             <li>React Router</li>
+            <li>React Syntax Highlighter</li>
             <li>ZenEngine</li>
             <li>gh-pages</li>
           </ul>
