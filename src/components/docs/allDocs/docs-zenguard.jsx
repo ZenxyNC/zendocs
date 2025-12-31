@@ -5,6 +5,14 @@ import AppStatus from "../components/appstatus/appstatus"
 export default function ZenGuardDocs() {
   const changelogs = [
     {
+      version: "2.0.2",
+      date: "Dec 28, 2025",
+      changes: [
+        "Patch /public/ error in production",
+        "Patch 404 error",
+      ]
+    },
+    {
       version: "2.0.1",
       date: "Dec 27, 2025",
       changes: [

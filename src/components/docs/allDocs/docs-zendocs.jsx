@@ -5,6 +5,13 @@ import { Divider } from "./global.docs.component"
 export default function ZenDocsDocs() {
   const changelogs = [
     {
+      version: "1.3.1",
+      date: "Dec 31, 2025",
+      changes: [
+        "Updated docs for ZenEngine and ZenGuard"
+      ]
+    },
+    {
       version: "1.3.0",
       date: "Dec 27, 2025",
       changes: [
