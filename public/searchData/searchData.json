@@ -34,5 +34,11 @@
     "title": "ZenGuard",
     "description": "ZenGuard, ZenEcosystem main security protocol. Explore the latest security technology and secure your information seamlessly with ZenGuard. Being protected in seamless by ZenGuard.",
     "param": "zenguard"
+  },
+  {
+    "icon": "resources/AppIcon/zenapps.png",
+    "title": "ZenApps",
+    "description": "ZenApps is a collection of apps built by Lucas Harel on behalf of ZenTech. This app will show you all apps created on behalf of ZenTech.",
+    "param": "zenapps"
   }
 ]

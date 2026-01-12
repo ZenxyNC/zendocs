@@ -6,6 +6,14 @@ import { Divider } from "./global.docs.component"
 export default function ZenDocsDocs() {
   const changelogs = [
     {
+      version: "1.4.1",
+      date: "Jan 13, 2026",
+      changes: [
+        "Add ZenApps docs",
+        "Fix ZenGuard image size"
+      ]
+    },
+    {
       version: "1.4.0",
       date: "Dec 31, 2025",
       changes: [

@@ -12,6 +12,7 @@ import ZenClockDocs from "./allDocs/docs-zenclock"
 import GitHelperDocs from "./allDocs/docs-GitHelper"
 import ZenDocsDocs from "./allDocs/docs-zendocs"
 import ZenGuardDocs from "./allDocs/docs-zenguard"
+import ZenAppsDocs from "./allDocs/docs-zenapps"
 
 export default function Docs({ setFaultyTerminal }) {
   const { project } = useParams();
@@ -48,6 +49,11 @@ export default function Docs({ setFaultyTerminal }) {
       param: "zenguard",
       title: "ZenGuard",
       component: <ZenGuardDocs />
+    },
+    {
+      param: "zenapps",
+      title: "ZenApps",
+      component: <ZenAppsDocs />
     }
   ]
 
