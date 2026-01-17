@@ -4,7 +4,17 @@ import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenDocsDocs() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   const changelogs = [
+    {
+      version: "1.4.3",
+      date: "Jan 17, 2026",
+      changes: [
+        "Updated entire copyright license"
+      ]
+    },
     {
       version: "1.4.2",
       date: "Jan 17, 2026",
@@ -222,7 +232,7 @@ export default function ZenDocsDocs() {
         <h1>License</h1>
         <div>
           <ul>
-            <li>Copyright © 2025 ZenTech. All rights reserved.</li>
+            <li>Copyright © {year} ZenTech. All rights reserved.</li>
           </ul>
         </div>
       </section>

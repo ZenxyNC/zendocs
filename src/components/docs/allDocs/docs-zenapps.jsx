@@ -4,6 +4,9 @@ import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenAppsDocs() {
+  const date = new Date()
+  const year = date.getFullYear()
+
   const changelogs = [
     {
       version: "1.0.0",
@@ -121,7 +124,7 @@ export default function ZenAppsDocs() {
         <h1>License</h1>
         <div>
           <ul>
-            <li>Copyright © 2025 ZenTech. All rights reserved.</li>
+            <li>Copyright © {year} ZenTech. All rights reserved.</li>
           </ul>
         </div>
       </section>

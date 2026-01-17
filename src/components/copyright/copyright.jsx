@@ -1,9 +1,11 @@
 import "./copyright.css"
 
 export default function Copyright() {
+  const date = new Date()
+  const year = date.getFullYear()
   return (
     <div id="copyright-text" translate="no">
-      Copyright © 2025 ZenTech. All Rights Reserved.
+      Copyright © {year} ZenTech. All Rights Reserved.
     </div>
   )
 }

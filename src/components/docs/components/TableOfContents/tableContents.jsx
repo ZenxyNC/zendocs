@@ -5,6 +5,9 @@ import ToCPath from "./ToCPath";
 import { useNavigate } from "react-router-dom";
 
 export default function TableContents({ ToCOpen }) {
+  const date = new Date();
+  const year = date.getFullYear();
+
   const navigate = useNavigate()
   const activeSection = useActiveSection()
   const [tocItems, setTocItems] = useState([])
@@ -51,7 +54,7 @@ export default function TableContents({ ToCOpen }) {
           ))}
         </div>
         <div id="tableContents-copyright" translate="no">
-          Copyright © 2025 ZenTech. All Rights Reserved.
+          Copyright © {year} ZenTech. All Rights Reserved.
         </div>
       </div>
     </>

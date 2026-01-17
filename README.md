@@ -66,7 +66,7 @@ I'm planning to create AI search for ZenDocs to help user find ZenApps. This wil
 
 # License
 
-Copyright © 2025 ZenTech. All rights reserved.
+Copyright © 2026 ZenTech. All rights reserved.
 
 # Credits
 

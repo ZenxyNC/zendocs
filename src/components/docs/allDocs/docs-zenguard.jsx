@@ -4,6 +4,9 @@ import AppStatus from "../components/appstatus/appstatus"
 import AppVersion from "../components/appVersion/appversion"
 
 export default function ZenGuardDocs() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   const changelogs = [
     {
       version: "2.0.2",
@@ -199,7 +202,7 @@ export default function ZenGuardDocs() {
         <div>
           You can use the ZenGuard codes in your project for free, its designed for that. But, I protected this project using copyright to prevent copy of ZenGuard
           <ul>
-            <li>Copyright © 2025 ZenTech.</li>
+            <li>Copyright © {year} ZenTech.</li>
             <li>MIT License</li>
           </ul>
         </div>

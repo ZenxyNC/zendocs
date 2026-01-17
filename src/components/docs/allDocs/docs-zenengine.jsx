@@ -4,6 +4,9 @@ import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenEngineDocs() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   const changelogs = [
     {
       version: "2.4.0",
@@ -13,7 +16,7 @@ export default function ZenEngineDocs() {
         "Edited See Docs to See Modules",
         "Adjusted Navbar menu button size",
         "Updated copyright license",
-        "Added Tailwiind/CSS code switch",
+        "Added Tailwind/CSS code switch",
         "Code renderer optimizatoin",
         "Adjusted border size",
         "Updated RnD status",
@@ -209,7 +212,7 @@ export default function ZenEngineDocs() {
         <div>
           You can use codes I've provided in this project for free, I made it open source. But, I protected this project using copyright to prevent copy of ZenEngine.
           <ul>
-            <li>2025 © ZenEngine.</li>
+            <li>Copyright © {year} ZenTech.</li>
             <li>MIT License.</li>
           </ul>
         </div>

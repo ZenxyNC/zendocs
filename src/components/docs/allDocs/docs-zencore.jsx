@@ -4,6 +4,9 @@ import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
 export default function ZenCoreDocs() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   const changelogs = [
     {
       version: "2.2.4",
@@ -141,6 +144,8 @@ export default function ZenCoreDocs() {
             <li>React Bits</li>
             <li>three</li>
             <li>react-router-dom</li>
+            <li>ZenEngine</li>
+            <li>ZenGuard</li>
             <li>gh-pages</li>
           </ul>
         </div>
@@ -206,7 +211,7 @@ export default function ZenCoreDocs() {
         <h1>License</h1>
         <div>
           <ul>
-            <li>Copyright © 2025 ZenTech. All rights reserved.</li>
+            <li>Copyright © {year} ZenTech. All rights reserved.</li>
           </ul>
         </div>
       </section>
@@ -225,7 +230,9 @@ export default function ZenCoreDocs() {
           <ul>
             <li>React</li>
             <li>React Router</li>
-            <li>ReactBits</li>
+            <li>React Bits</li>
+            <li>ZenEngine</li>
+            <li>ZenGuard</li>
             <li>ogl (Open Graphic Library)</li>
             <li>gh-pages (deployment)</li>
           </ul>

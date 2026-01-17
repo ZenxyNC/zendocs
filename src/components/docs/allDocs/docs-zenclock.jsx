@@ -4,6 +4,9 @@ import AppStatus from "../components/appstatus/appstatus"
 import AppVersion from "../components/appVersion/appversion"
 
 export default function ZenClockDocs() {
+  const date = new Date()
+  const year = date.getFullYear()
+
   const changelogs = [
     {
       version: "1.2.0",
@@ -152,7 +155,7 @@ export default function ZenClockDocs() {
         <h1>License</h1>
         <div>
           <ul>
-            <li>Copyright © 2025 ZenTech. All rights reserved.</li>
+            <li>Copyright © {year} ZenTech. All rights reserved.</li>
           </ul>
         </div>
       </section>
