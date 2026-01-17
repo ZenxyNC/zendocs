@@ -6,10 +6,20 @@ import { Divider } from "./global.docs.component"
 export default function ZenCoreDocs() {
   const changelogs = [
     {
+      version: "2.2.4",
+      date: "Jan 16, 2026",
+      changes: [
+        "Updated alert box using ZenEngine",
+        "Added ZenApps",
+        "Updated App Icon source",
+        "Patch invalid month counting"
+      ]
+    },
+    {
       version: "2.2.3",
       date: "Dec 27, 2025",
       changes: [
-        "Patch ZenGuard Failure Error"
+        "Patch ZenGuard failure error"
       ]
     },
     {
