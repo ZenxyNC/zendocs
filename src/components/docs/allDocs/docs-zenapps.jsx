@@ -3,11 +3,22 @@ import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
-export default function ZenAppsDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function ZenAppsDocs({ apiData }) {
   const date = new Date()
   const year = date.getFullYear()
 
-  const changelogs = [
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ?? [
     {
       version: "1.0.0",
       date: "Jan 13, 2026",
@@ -22,9 +33,9 @@ export default function ZenAppsDocs() {
         <h1>ZenApps</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
-          <AppVersion version={changelogs[0].version} />
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>Built from real-world everyday problems, designed for real-world solutions.</div>
+        <div>{apiData?.description ?? "Built from real-world everyday problems, designed for real-world solutions."}</div>
       </section>
       <Divider />
 

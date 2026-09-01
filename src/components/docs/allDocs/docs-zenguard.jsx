@@ -3,11 +3,22 @@ import { Divider } from "./global.docs.component"
 import AppStatus from "../components/appstatus/appstatus"
 import AppVersion from "../components/appVersion/appversion"
 
-export default function ZenGuardDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function ZenGuardDocs({ apiData }) {
   const date = new Date();
   const year = date.getFullYear();
 
-  const changelogs = [
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ?? [
     {
       version: "2.0.2",
       date: "Dec 28, 2025",
@@ -95,9 +106,9 @@ export default function ZenGuardDocs() {
         <h1>ZenGuard</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
-          <AppVersion version={changelogs[0].version} />
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>ZenGuard is ZenEcosystem main security protocol.</div>
+        <div>{apiData?.description ?? "ZenGuard is ZenEcosystem main security protocol."}</div>
       </section>
       <Divider />
 

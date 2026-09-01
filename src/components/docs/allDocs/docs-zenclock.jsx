@@ -3,11 +3,22 @@ import { Divider } from "./global.docs.component"
 import AppStatus from "../components/appstatus/appstatus"
 import AppVersion from "../components/appVersion/appversion"
 
-export default function ZenClockDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function ZenClockDocs({ apiData }) {
   const date = new Date()
   const year = date.getFullYear()
 
-  const changelogs = [
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ?? [
     {
       version: "1.2.0",
       date: "Dec 13, 2025",
@@ -50,9 +61,9 @@ export default function ZenClockDocs() {
         <h1>ZenClock</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
-          <AppVersion version={changelogs[0].version} />
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>ZenClock, a clock with unique backgrounds.</div>
+        <div>{apiData?.description ?? "ZenClock, a clock with unique backgrounds."}</div>
       </section>
       <Divider />
 

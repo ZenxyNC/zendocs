@@ -3,9 +3,9 @@ import { useEffect, useState } from "react"
 import Searchbar from "./searchbar"
 import SearchResult from "./searchResult/searchResult"
 
-export default function Search({ setFaultyTerminal }) {
+export default function Search({ setGradientwaves }) {
   useEffect(() => {
-    setFaultyTerminal("#a7ef9e")
+    setGradientwaves("#5227FF")
   }, [])
   const [searchQuery, setSearchQuery] = useState("")
   return (

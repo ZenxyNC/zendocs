@@ -11,7 +11,7 @@ function formatDate(dateObj) {
   return `${month} ${dateObj.day}, ${dateObj.year}`
 }
 
-export default function GitHelperDocs({ apiData }) {
+export default function ZenAccountDocs({ apiData }) {
   const date = new Date()
   const year = date.getFullYear()
 
@@ -20,28 +20,30 @@ export default function GitHelperDocs({ apiData }) {
     date: formatDate(cl.date)
   })).reverse() ?? [
     {
-      version: "1.0.0",
-      date: "Dec 13, 2025",
+      version: "0.0.0",
+      date: "Nov 12, 2032",
       changes: [
-        "Initial Release"
+        "CHANGELOG_1",
+        "CHANGELOG_2",
       ]
     }
   ]
+
   return (
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
-        <h1>GitHelper</h1>
+        <h1>ZenAccount</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
           <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>{apiData?.description ?? "GitHelper, a tool to help you with git commands. Helps you fix 404, deploying, and committing to GitHub."}</div>
+        <div>{apiData?.description ?? "Project in 1-2 sentences."}</div>
       </section>
       <Divider />
 
       <section id="docs-overview" data-toc="Overview">
         <h1>Overview</h1>
-        <div>Most common GitHub problem is 404 error, a lot of deploying and committing commands. With GitHelper, you can fix these issues with only copy-paste.</div>
+        <div>An upgrade for ZenEcosystem users and developers. ZenAccount simplifies the way you introduce yourself to ZenEcosystem. While developers </div>
       </section>
       <Divider/>
 
@@ -49,9 +51,8 @@ export default function GitHelperDocs({ apiData }) {
         <h1>Features</h1>
         <div>
           <ul>
-            <li>No Installation Required</li>
-            <li>Simple UI and usage</li>
-            <li>Providing commands to fix 404, deployment, and commit to GitHub</li>
+            <li>Login to all ZenApps</li>
+            <li>Login restriction to ZenApps only</li>
           </ul>
         </div>
       </section>
@@ -71,13 +72,17 @@ export default function GitHelperDocs({ apiData }) {
         <div className="paragraph-h2">
           <ul>
             <li>React</li>
+            <li>TailwindCSS</li>
           </ul>
         </div>
         <h2>Dependencies</h2>
         <div className="paragraph-h2">
           <ul>
             <li>React Router</li>
-            <li>ZenEngine</li>
+            <li>React Icons</li>
+            <li>JSONBin</li>
+            <li>gh-pages</li>
+            <li>React Bits</li>
           </ul>
         </div>
       </section>
@@ -85,16 +90,17 @@ export default function GitHelperDocs({ apiData }) {
 
       <section id="docs-technicalOverview" data-toc="Technical Overview">
         <h1>Technical Overview</h1>
-        <div>
-          This project built using React + JavaScript as the main framework. GitHelper using React Router to navigate between pages, ZenEngine to stylize snackbar. User will need to input all required information to get commands (repository name, GitHub Username, Commit Message).
-        </div>
+        <div>ZenAccount uses JSONBin as its database. In context of security, ZenAccount leverage browser's localStorage to store user's data. Also, ZenAccount will verify if the app origin is a valid ZenApps or not.</div>
       </section>
       <Divider/>
 
       <section id="docs-usage" data-toc="Usage">
         <h1>Usage</h1>
         <div>
-          When opening GitHelper, you will see 2 section. Left section, used to input all required information and change mode. Right section, used to display commands and actions you need to do, you can click the line to copy the command. You can also see indicator to show if the command is ready to use, need an input, or done.
+          <h2>Login to ZenAccount</h2>
+          <div className="paragraph-h2">
+            If you open ZenAccount from a valid origin, you can login directly.
+          </div>
         </div>
       </section>
       <Divider/>
@@ -102,9 +108,13 @@ export default function GitHelperDocs({ apiData }) {
       <section id="docs-roadmap" data-toc="Roadmap">
         <h1>Roadmap</h1>
         <div>
-          <h2>All-in Commands</h2>
+          <h2>QR Code Login</h2>
           <div className="paragraph-h2">
-            I'm planning to create feature that allows you to get all commands in one click. So, 1 copy-paste, and all job's done.
+            I'm planning to add QR Code Login to ZenAccount, connected to ZenCore as the verifier.
+          </div>
+          <h2>Account Suggestion</h2>
+          <div className="paragraph-h2">
+            Once you logged in, ZenAccount will suggest you to login automatically to that account when you're logging in to other ZenApps (as long as you logged in to that account in any ZenApps).
           </div>
         </div>
       </section>
@@ -115,7 +125,6 @@ export default function GitHelperDocs({ apiData }) {
         <div>
           <ul>
             <li>Copyright © {year} ZenTech. All rights reserved.</li>
-            <li>MIT License</li>
           </ul>
         </div>
       </section>
@@ -133,9 +142,12 @@ export default function GitHelperDocs({ apiData }) {
         <div className="paragraph-h2">
           <ul>
             <li>React</li>
+            <li>Tailwind CSS</li>
             <li>React Router</li>
-            <li>ZenEngine</li>
-            <li>gh-pages (deployment)</li>
+            <li>React Icons</li>
+            <li>gh-pages</li>
+            <li>JSONBin</li>
+            <li>React Bits</li>
           </ul>
         </div>
         <h2>Assets</h2>

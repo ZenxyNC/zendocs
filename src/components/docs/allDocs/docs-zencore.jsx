@@ -3,11 +3,22 @@ import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
-export default function ZenCoreDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function ZenCoreDocs({ apiData }) {
   const date = new Date();
   const year = date.getFullYear();
 
-  const changelogs = [
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ?? [
     {
       version: "2.2.4",
       date: "Jan 16, 2026",
@@ -97,9 +108,9 @@ export default function ZenCoreDocs() {
         <h1>ZenCore</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
-          <AppVersion version={changelogs[0].version} />
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>The core to connects, secures, and centralize entire ZenEcosystem in one place.</div>
+        <div>{apiData?.description ?? "The core to connects, secures, and centralize entire ZenEcosystem in one place."}</div>
       </section>
       <Divider />
 

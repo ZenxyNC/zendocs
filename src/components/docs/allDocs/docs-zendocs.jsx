@@ -3,11 +3,23 @@ import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
-export default function ZenDocsDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function ZenDocsDocs({ apiData }) {
   const date = new Date();
   const year = date.getFullYear();
 
-  const changelogs = [
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ??
+ [
     {
       version: "1.4.3",
       date: "Jan 17, 2026",
@@ -132,9 +144,9 @@ export default function ZenDocsDocs() {
         <h1>ZenDocs</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
-          <AppVersion version={changelogs[0].version} />
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>Know more about ZenApps from inside.</div>
+        <div>{apiData?.description ?? "Know more about ZenApps from inside."}</div>
       </section>
       <Divider />
 

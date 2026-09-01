@@ -3,11 +3,23 @@ import AppVersion from "../components/appVersion/appversion"
 import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
-export default function ZenEngineDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function ZenEngineDocs({ apiData }) {
   const date = new Date();
   const year = date.getFullYear();
 
-  const changelogs = [
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ??
+ [
     {
       version: "2.4.0",
       date: "Jan 16, 2026",
@@ -113,9 +125,9 @@ export default function ZenEngineDocs() {
         <h1>ZenEngine</h1>
         <div style={{display: "flex", gap: "12px"}}>
           <AppStatus status="Maintained"/>
-          <AppVersion version={changelogs[0].version} />
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
         </div>
-        <div>ZenEngine, a compact and easy-to-use module for React web applications.</div>
+        <div>{apiData?.description ?? "ZenEngine, a compact and easy-to-use module for React web applications."}</div>
       </section>
       <Divider />
 

@@ -2,9 +2,9 @@ import { useEffect } from "react"
 import MainTitle from "../main/mainTitle/mainTitle"
 
 
-export default function NotFound({ setFaultyTerminal }) {
+export default function NotFound({ setGradientwaves }) {
   useEffect(() => {
-    setFaultyTerminal("#FF393D");
+    setGradientwaves("#FF393D");
     document.title = "ZenDocs — Not Found"
   }, []);
 

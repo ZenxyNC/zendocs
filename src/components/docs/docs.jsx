@@ -13,54 +13,84 @@ import GitHelperDocs from "./allDocs/docs-GitHelper"
 import ZenDocsDocs from "./allDocs/docs-zendocs"
 import ZenGuardDocs from "./allDocs/docs-zenguard"
 import ZenAppsDocs from "./allDocs/docs-zenapps"
+import ZenAccountDocs from "./allDocs/docs-zenaccount"
+import ZenBaseDocs from "./allDocs/docs-zenbase"
 
-export default function Docs({ setFaultyTerminal }) {
+export default function Docs({ setGradientwaves }) {
   const { project } = useParams();
   const navigate = useNavigate();
   const [ToCOpen, setToCOpen] = useState(false);
+  const [apiData, setApiData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(import.meta.env.VITE_JSONBIN_URL, {
+          headers: {
+            "X-Master-Key": import.meta.env.VITE_JSONBIN_MASTER_KEY
+          }
+        });
+        const json = await response.json();
+        setApiData(json.record);
+      } catch (error) {
+        console.error("Failed to fetch JSONBin data:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const DocsComponents = [
     {
       param: "zencore",
       title: "ZenCore",
-      component: <ZenCoreDocs />
+      component: <ZenCoreDocs apiData={apiData?.zencore} />
     },
     {
       param: "zenengine",
       title: "ZenEngine",
-      component: <ZenEngineDocs />
+      component: <ZenEngineDocs apiData={apiData?.zenengine} />
     },
     {
       param: "zenclock",
       title: "ZenClock",
-      component: <ZenClockDocs />
+      component: <ZenClockDocs apiData={apiData?.zenclock} />
     },
     {
       param: "githelper",
       title: "GitHelper",
-      component: <GitHelperDocs />
+      component: <GitHelperDocs apiData={apiData?.githelper} />
     },
     {
       param: "zendocs",
       title: "ZenDocs",
-      component: <ZenDocsDocs />
+      component: <ZenDocsDocs apiData={apiData?.zendocs} />
     },
     {
       param: "zenguard",
       title: "ZenGuard",
-      component: <ZenGuardDocs />
+      component: <ZenGuardDocs apiData={apiData?.zenguard} />
     },
     {
       param: "zenapps",
       title: "ZenApps",
-      component: <ZenAppsDocs />
+      component: <ZenAppsDocs apiData={apiData?.zenapps} />
+    },
+    {
+      param: "zenaccount",
+      title: "ZenAccount",
+      component: <ZenAccountDocs apiData={apiData?.zenaccount} />
+    },
+    {
+      param: "zenbase",
+      title: "ZenBase",
+      component: <ZenBaseDocs apiData={apiData?.zenbase} />
     }
   ]
 
   useEffect(() => {
-    setFaultyTerminal(false)
+    setGradientwaves(false)
     document.title = "ZenDocs – " + DocsComponents.find((component) => component.param === project)?.title
-  }, [])
+  }, [apiData])
 
   function findDocsComponent() {
     const docsComponent = DocsComponents.find((component) => component.param === project)?.component

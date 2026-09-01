@@ -1,11 +1,43 @@
+import AppStatus from "../components/appstatus/appstatus"
+import AppVersion from "../components/appVersion/appversion"
+import Changelog from "../components/changelog/changelog"
 import { Divider } from "./global.docs.component"
 
-export default function TemplateDocs() {
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+function formatDate(dateObj) {
+  if (!dateObj) return ""
+  const month = MONTHS[parseInt(dateObj.month, 10) - 1] ?? dateObj.month
+  return `${month} ${dateObj.day}, ${dateObj.year}`
+}
+
+export default function TemplateDocs({ apiData }) {
+  const date = new Date()
+  const year = date.getFullYear()
+
+  const changelogs = apiData?.changelogs?.map(cl => ({
+    ...cl,
+    date: formatDate(cl.date)
+  })).reverse() ?? [
+    {
+      version: "0.0.0",
+      date: "Nov 12, 2032",
+      changes: [
+        "CHANGELOG_1",
+        "CHANGELOG_2",
+      ]
+    }
+  ]
+
   return (
     <>
       <section id="docs-projectTitle" data-toc="Project Title">
         <h1>Your_Project</h1>
-        <div>Project in 1-2 sentences.</div>
+        <div style={{display: "flex", gap: "12px"}}>
+          <AppStatus status="Maintained"/>
+          <AppVersion version={apiData?.current_version ?? changelogs[0].version} />
+        </div>
+        <div>{apiData?.description ?? "Project in 1-2 sentences."}</div>
       </section>
       <Divider />
 
@@ -80,7 +112,9 @@ export default function TemplateDocs() {
       <section id="docs-license" data-toc="License">
         <h1>License</h1>
         <div>
-          License of your project.
+          <ul>
+            <li>Copyright © {year} ZenTech. All rights reserved.</li>
+          </ul>
         </div>
       </section>
       <Divider/>
@@ -104,13 +138,19 @@ export default function TemplateDocs() {
 
       <section id="docs-changelogs" className="docs-lastSection" data-toc="Changelogs">
         <h1>Changelogs</h1>
-        <h2>Version 0.0.0 [Nov 12, 2032]</h2>
-        <div className="paragraph-h2">
-          <ul>
-            <li>CHANGELOG_1</li>
-            <li>CHANGELOG_2</li>
-          </ul>
-        </div>
+        {changelogs.map((changelog, index) => (
+          <Changelog
+            key={index}
+            version={changelog.version}
+            date={changelog.date}
+          >
+            <ul>
+              {changelog.changes.map((change, index) => (
+                <li key={index}>{change}</li>
+              ))}
+            </ul>
+          </Changelog>
+        ))}
       </section>
     </>
   )
