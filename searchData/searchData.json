@@ -40,5 +40,17 @@
     "title": "ZenApps",
     "description": "ZenApps is a collection of apps built by Lucas Harel on behalf of ZenTech. This app will show you all apps created on behalf of ZenTech.",
     "param": "zenapps"
+  },
+  {
+    "icon": "resources/AppIcon/zenaccount.png",
+    "title": "ZenAccount",
+    "description": "One identity, all ZenApps. ZenAccount centralizes login across all ZenApps, ensuring better consistency and security.",
+    "param": "zenaccount"
+  },
+  {
+    "icon": "resources/AppIcon/zenbase.png",
+    "title": "ZenBase",
+    "description": "ZenApps is a collection of apps built by Lucas Harel on behalf of ZenTech. This app will show you all apps created on behalf of ZenTech.",
+    "param": "zenbase"
   }
 ]
